@@ -49,6 +49,10 @@ function renderCards(farmAnimals) {
     content.appendChild(card);
   });
 
+  /*   Check document has an element class named "content"
+  if exists replace this content
+  else create an element has class named "content"
+ */
   const exisContent = document.querySelector('.content');
 
   if (exisContent) {
@@ -59,6 +63,7 @@ function renderCards(farmAnimals) {
   }
 }
 
+// Create animal instances
 const Sila = new Dog('Sila', DogImage, 4, 5);
 const Duffy = new Duck('Duffy', DuckImage, 2, 1);
 const Max = new Dog('Max', DogImage, 4, 0.6);
@@ -67,8 +72,11 @@ const Winnie = new Duck('Winnie', DuckImage, 2, 3);
 const Alex = new Dog('Alex', DogImage, 4, 1);
 
 const farmAnimals = [Sila, Duffy, Max, Kartopu, Winnie, Alex];
+
+// Render Cards to the screen
 renderCards(farmAnimals);
 
+// Add event listener for searchbar. Rerender cards on search.
 document.querySelector('.searchBar').addEventListener('input', (e) => {
   const filteredAnimals = farmAnimals.filter((data) => data.name.toLowerCase().includes(e.target.value.toLowerCase()));
   renderCards(filteredAnimals);

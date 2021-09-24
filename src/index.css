@@ -1,0 +1,112 @@
+html,
+body {
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
+  font-family: Roboto;
+}
+
+body {
+  background: rgb(34, 193, 195);
+  background: linear-gradient(180deg, rgba(34, 193, 195, 1) 0%, rgba(253, 187, 45, 1) 100%);
+}
+
+header {
+  background: rgba(255, 255, 255, 0.3);
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+  backdrop-filter: blur(1.5px);
+  -webkit-backdrop-filter: blur(1.5px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  display: flex;
+  box-sizing: border-box;
+  flex: 1;
+  padding: 10px 5%;
+  height: 80px;
+  gap: 20px;
+}
+
+header > img {
+  flex: 1;
+}
+
+header > .searchBar {
+  position: relative;
+  padding-left: 50px;
+  background-color: white;
+  height: 60px;
+  font-size: 15px;
+  border-radius: 5px;
+  flex: 4;
+}
+
+.searchBar > input {
+  outline: none;
+  border: none;
+  background: none;
+  width: 80%;
+  height: 60px;
+  padding: 0 10px;
+
+  font-size: 20px;
+  color: #e27d60;
+
+  background: white;
+}
+
+.fa-search {
+  font-size: 30px;
+  position: absolute;
+  left: 0;
+  color: #41b3a3;
+  margin-top: 16px;
+  margin-left: 15px;
+}
+
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.3);
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+  backdrop-filter: blur(1.5px);
+  -webkit-backdrop-filter: blur(1.5px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  display: flex;
+  padding: 10px;
+  height: 20px;
+}
+
+footer > * {
+  margin: auto;
+  font-weight: bold;
+  font-size: 13px;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.content {
+  height: calc(100% - 142px);
+  padding: 10px;
+  overflow: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: flex-start;
+  gap: 20px;
+}
+
+.card {
+  width: 300px;
+  height: min-content;
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+  backdrop-filter: blur(0.5px);
+  -webkit-backdrop-filter: blur(1px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 20px;
+  padding: 20px;
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
